@@ -38,13 +38,13 @@ for key,group in grouped_list:
     sumOfQuant =[]
     
 writer.write(csv_file_out_path1,data1Output)
+
 data2Sorted = sorted(data2Output,key=lambda x:x[1],reverse=True)
 topN= data2Sorted[0][1]
 topN_filtered = list(filter(lambda x: x[1] == topN, data2Sorted))
 
 writer.write(csv_file_out_path2,topN_filtered)
 
-print()
 
       
 
